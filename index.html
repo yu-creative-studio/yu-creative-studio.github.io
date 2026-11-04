@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>YU DESIGN｜個人のお店のホームページ制作・管理</title>
+  <meta name="description" content="YU DESIGNは、個人経営のお店・個人事業主向けのホームページ制作・管理サービスです。デザイン制作から公開設定、公開後の更新までLINEでまとめてサポート。サーバー費用0円。初期制作費9,800円から。">
+  <meta name="theme-color" content="#F5F2EC">
+  <link rel="canonical" href="https://yu-creative-studio.github.io/">
+
+  <!-- OGP -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="YU DESIGN">
+  <meta property="og:title" content="YU DESIGN｜個人のお店のホームページ制作・管理">
+  <meta property="og:description" content="デザインから公開後の管理まで。個人のお店のホームページを、もっと身近に。">
+  <meta property="og:url" content="https://yu-creative-studio.github.io/">
+  <meta property="og:image" content="https://yu-creative-studio.github.io/images/common/ogp.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500&display=swap">
+
+  <link rel="preload" as="image" href="images/hero/slide-1.webp" type="image/webp">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "YU DESIGN",
+    "description": "個人経営のお店・個人事業主向けのホームページ制作・管理サービス",
+    "url": "https://yu-creative-studio.github.io/",
+    "slogan": "Design that moves business forward.",
+    "priceRange": "¥9,800〜"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+
+  <!-- ============ LOADER ============ -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__panels"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="loader__inner">
+      <p class="loader__mark">yu.</p>
+      <p class="loader__sub">YU DESIGN</p>
+    </div>
+    <p class="loader__count"><span class="js-load-num">000</span></p>
+  </div>
+
+  <!-- cursor -->
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"><em class="cursor__label"></em></span></div>
+  <div class="progress" aria-hidden="true"><i></i></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="top">
+    <div class="header__inner">
+      <a class="logo" href="#top" aria-label="YU DESIGN トップへ戻る"><span class="logo__mark" aria-hidden="true">yu.</span></a>
+
+      <nav class="gnav" aria-label="メインナビゲーション">
+        <ul class="gnav__list">
+          <li><a href="#about" data-hover>ABOUT</a></li>
+          <li><a href="#services" data-hover>SERVICES</a></li>
+          <li><a href="#works" data-hover>WORKS</a></li>
+          <li><a href="#price" data-hover>PRICE</a></li>
+          <li><a href="#flow" data-hover>FLOW</a></li>
+          <li><a href="#faq" data-hover>FAQ</a></li>
+        </ul>
+      </nav>
+
+      <a class="pill pill--dark header__cta js-line" role="link" data-magnetic>CONTACT<span class="pill__arrow" aria-hidden="true"></span></a>
+
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="メニューを開く" data-magnetic>
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Full-screen menu -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu__bg"></div>
+    <div class="menu__inner">
+      <nav class="menu__nav" aria-label="メニュー">
+        <ol>
+          <li><a href="#about"><span class="menu__no">01</span><span class="menu__word">About</span><span class="menu__ja">私たちについて</span></a></li>
+          <li><a href="#services"><span class="menu__no">02</span><span class="menu__word">Services</span><span class="menu__ja">サービス</span></a></li>
+          <li><a href="#works"><span class="menu__no">03</span><span class="menu__word">Works</span><span class="menu__ja">制作実績</span></a></li>
+          <li><a href="#price"><span class="menu__no">04</span><span class="menu__word">Price</span><span class="menu__ja">料金</span></a></li>
+          <li><a href="#flow"><span class="menu__no">05</span><span class="menu__word">Flow</span><span class="menu__ja">制作の流れ</span></a></li>
+          <li><a href="#contact"><span class="menu__no">06</span><span class="menu__word">Contact</span><span class="menu__ja">お問い合わせ</span></a></li>
+        </ol>
+      </nav>
+      <div class="menu__side">
+        <p class="menu__mark">yu.</p>
+        <p class="menu__tag">Design that moves business forward.</p>
+        <a class="pill pill--line js-line" role="link"><img class="line-logo" src="assets/line-icon.png" alt="" width="24" height="24" aria-hidden="true">LINEで無料相談</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__media">
+        <img class="hero__fallback" src="images/hero/slide-1.webp" alt="" width="2400" height="1351" fetchpriority="high">
+        <canvas class="hero__gl" aria-hidden="true"
+          data-slides='[{"src":"images/hero/slide-1.webp","fx":0.8,"fy":0.42},{"src":"images/hero/slide-2.webp","fx":0.76,"fy":0.42}]'></canvas>
+      </div>
+
+      <div class="hero__inner">
+        <h1 class="hero__title" id="hero-title">
+          <span class="visually-hidden">YU DESIGN｜個人のお店のホームページ制作・管理</span>
+          <span class="hero__line" aria-hidden="true" data-chars>YU</span>
+          <span class="hero__line hero__line--2" aria-hidden="true" data-chars>DESIGN</span>
+        </h1>
+        <ul class="hero__tags" aria-label="サービス">
+          <li>WEB DESIGN</li>
+          <li>LINE OFFICIAL ACCOUNT</li>
+          <li>HOSTING &amp; SUPPORT</li>
+        </ul>
+        <p class="hero__catch">お店の魅力を、<br>もっと伝わるカタチに。</p>
+        <p class="hero__text">デザインから公開後の管理まで。<br>個人のお店のホームページを、もっと身近に。</p>
+      </div>
+
+      <a class="hero__scroll" href="#about" aria-label="下へスクロール" data-magnetic>
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+          <defs><path id="circlePath" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+          <text><textPath href="#circlePath">CREATE YOUR DIGITAL IDENTITY · CREATE YOUR DIGITAL IDENTITY · </textPath></text>
+        </svg>
+        <span class="hero__scroll-label">SCROLL</span>
+        <span class="hero__scroll-arrow" aria-hidden="true"></span>
+      </a>
+
+      <ol class="hero__index" aria-hidden="true">
+        <li class="is-active"><span>01</span><i></i></li>
+        <li><span>02</span><i></i></li>
+      </ol>
+      <p class="hero__caption" aria-hidden="true"><span class="js-hero-cap">Light &amp; Air</span></p>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <p class="wm wm--about" aria-hidden="true" data-wm>About</p>
+        <div class="about__text">
+          <p class="kicker" data-reveal>ABOUT</p>
+          <h2 class="shead__title shead__title--xl" id="about-title" data-split>ただ作るだけではなく、<br>その先の成果まで考える。</h2>
+          <div class="about__body" data-reveal>
+            <p>私たちは、ホームページを単なる情報掲載の場所だとは考えていません。</p>
+            <p>お店の雰囲気、サービスの魅力、オーナーの想い。<br>それらをデザインで整理し、訪問した人に正しく伝えることが大切だと考えています。</p>
+            <p>YU DESIGNは、デザインとテクノロジーを通じて、個人のお店のビジネスをサポートします。</p>
+          </div>
+          <a class="pill pill--outline" href="#strength" data-reveal data-magnetic>MORE<span class="pill__arrow" aria-hidden="true"></span></a>
+        </div>
+        <figure class="about__arch" data-reveal="mask">
+          <img src="images/common/about-arch.webp" alt="" width="1200" height="1500" loading="lazy" decoding="async" data-parallax-img>
+        </figure>
+      </div>
+
+      <!-- STRENGTH -->
+      <div class="container strength" id="strength">
+        <div class="strength__head">
+          <p class="kicker" data-reveal>WHY YU DESIGN</p>
+          <p class="strength__title" data-reveal>選ばれる、4つの理由</p>
+        </div>
+        <ol class="strength__list">
+          <li class="str" data-reveal>
+            <span class="str__num" data-count-text>01</span>
+            <h3 class="str__title"><span class="en">Design First</span><span class="ja">見た目だけでなく、店舗の魅力を伝えるデザイン。</span></h3>
+            <p class="str__text">テンプレートをそのまま使うのではなく、店舗の特徴に合わせたサイトを制作します。</p>
+          </li>
+          <li class="str" data-reveal>
+            <span class="str__num">02</span>
+            <h3 class="str__title"><span class="en">One-Stop Support</span><span class="ja">制作から公開後の管理まで一括対応。</span></h3>
+            <p class="str__text">ドメインの接続や公開設定など、難しい作業はすべて代行します。</p>
+          </li>
+          <li class="str" data-reveal>
+            <span class="str__num">03</span>
+            <h3 class="str__title"><span class="en">Easy Communication</span><span class="ja">相談・修正依頼はLINEで完結。</span></h3>
+            <p class="str__text">専門用語を使わず、わかりやすく対応します。</p>
+          </li>
+          <li class="str" data-reveal>
+            <span class="str__num">04</span>
+            <h3 class="str__title"><span class="en">Reasonable Price</span><span class="ja">個人のお店にも始めやすい料金設定。</span></h3>
+            <p class="str__text">初期費用を抑えながら、ホームページを持てる仕組みを提供します。</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <p class="wm wm--services" aria-hidden="true" data-wm>Services</p>
+      <div class="container">
+        <div class="shead">
+          <p class="kicker" data-reveal>SERVICES</p>
+          <h2 class="shead__title shead__title--xl" id="services-title" data-split>成果につながる、<br>デザインを。</h2>
+          <p class="shead__lead" data-reveal>制作から公開後の管理まで。<br>ホームページに関することを、まとめてサポートします。</p>
+        </div>
+
+        <ul class="svc-list" role="list">
+          <li class="svc" data-reveal data-tilt>
+            <figure class="svc__img"><img src="images/service/service-01.webp" alt="ノートPCに表示されたYU DESIGNのWebサイト" width="1200" height="960" loading="lazy" decoding="async"></figure>
+            <div class="svc__body">
+              <p class="svc__num">01</p>
+              <h3 class="svc__title"><span class="ja">ホームページ制作</span><span class="en">Website Design</span></h3>
+              <p class="svc__text">店舗の魅力やブランドイメージに合わせたオリジナルデザイン。スマートフォン・PCの両方に対応した、見やすく使いやすいサイトを制作します。</p>
+            </div>
+            <span class="svc__go" aria-hidden="true"></span>
+          </li>
+          <li class="svc" data-reveal data-tilt>
+            <figure class="svc__img"><img src="images/service/service-02.webp" alt="観葉植物とノートが置かれた作業デスク" width="1200" height="960" loading="lazy" decoding="async"></figure>
+            <div class="svc__body">
+              <p class="svc__num">02</p>
+              <h3 class="svc__title"><span class="ja">公開後の管理・更新</span><span class="en">Hosting &amp; Support</span></h3>
+              <p class="svc__text">ドメイン接続・SSL・公開設定など、専門的で面倒な作業はすべて代行。サーバー費用は0円です。営業時間やメニュー、写真の変更も、LINEで連絡するだけで依頼できます。</p>
+            </div>
+            <span class="svc__go" aria-hidden="true"></span>
+          </li>
+          <li class="svc" data-reveal data-tilt>
+            <figure class="svc__img"><img src="images/service/service-03.webp" alt="スマートフォンでお店とメッセージをやりとりしている画面" width="1200" height="960" loading="lazy" decoding="async"></figure>
+            <div class="svc__body">
+              <p class="svc__num">03</p>
+              <h3 class="svc__title"><span class="ja">LINE公式アカウント構築</span><span class="en">LINE Official Account</span></h3>
+              <p class="svc__text">アカウントの開設から、あいさつメッセージ、リッチメニュー、予約やクーポンへの導線づくりまで。ホームページと連動させて、来店とリピートにつなげます。</p>
+              <p class="svc__note">別途お見積もり</p>
+            </div>
+            <span class="svc__go" aria-hidden="true"></span>
+          </li>
+          <li class="svc" data-reveal data-tilt>
+            <figure class="svc__img"><img src="images/service/service-04.webp" alt="カードや封筒などの紙のデザイン制作物" width="1200" height="960" loading="lazy" decoding="async"></figure>
+            <div class="svc__body">
+              <p class="svc__num">04</p>
+              <h3 class="svc__title"><span class="ja">その他クリエイティブ制作</span><span class="en">Creative Design</span></h3>
+              <p class="svc__text">バナー、SNS用画像、Web広告素材、店舗用デザイン素材など、お店の発信に必要なデザインを制作します。</p>
+              <p class="svc__note">必要に応じて個別見積もり</p>
+            </div>
+            <span class="svc__go" aria-hidden="true"></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ WORKS ============ -->
+    <section class="section works" id="works" aria-labelledby="works-title">
+      <div class="container works__head">
+        <div class="shead">
+          <p class="kicker" data-reveal>WORKS</p>
+          <h2 class="shead__title shead__title--xl" id="works-title" data-split>制作実績</h2>
+          <p class="shead__lead" data-reveal>これまでに制作したWebデザインをご紹介します。<br>すべて、縦長1ページ構成（BASICプラン相当）のサイトです。</p>
+        </div>
+        <div class="works__nav" data-reveal>
+          <button class="round-btn js-works-prev" type="button" aria-label="前の作品" data-magnetic><span class="round-btn__arrow round-btn__arrow--prev" aria-hidden="true"></span></button>
+          <p class="works__count" aria-live="polite"><em class="js-works-cur">01</em> / <span class="js-works-total">05</span></p>
+          <button class="round-btn js-works-next" type="button" aria-label="次の作品" data-magnetic><span class="round-btn__arrow" aria-hidden="true"></span></button>
+        </div>
+      </div>
+
+      <div class="coverflow" data-reveal>
+        <ul class="coverflow__track" role="list">
+          <li class="cf" data-work="moranbon">
+            <a class="cf__card js-work" aria-label="MORANBON">
+              <img src="images/works/moranbon.webp" alt="MORANBON 韓国料理店のホームページのトップ画面" width="1440" height="900" loading="lazy" decoding="async" draggable="false">
+            </a>
+            <div class="cf__meta">
+              <h3 class="cf__title">MORANBON</h3>
+              <p class="cf__cat">韓国料理店のホームページ</p>
+              <p class="cf__desc">韓紙をイメージした背景で、韓国の伝統的な雰囲気と高級感のある店舗の世界観を表現。</p>
+            </div>
+          </li>
+          <li class="cf" data-work="rezard">
+            <a class="cf__card js-work" aria-label="REZARD GYM">
+              <img src="images/works/rezard-gym.webp" alt="REZARD GYM フィットネス・ジム向けLPのトップ画面" width="1440" height="900" loading="lazy" decoding="async" draggable="false">
+            </a>
+            <div class="cf__meta">
+              <h3 class="cf__title">REZARD GYM</h3>
+              <p class="cf__cat">フィットネス・ジム向けLP</p>
+              <p class="cf__desc">トレーニングの力強さを、スタイリッシュな構成で。サービスの魅力が伝わる導線設計。</p>
+            </div>
+          </li>
+          <li class="cf" data-work="lumie">
+            <a class="cf__card js-work" aria-label="LUMIÉ">
+              <img src="images/works/lumie-nail.webp" alt="Nail Atelier LUMIÉ ネイルサロン向けLPのトップ画面" width="1440" height="900" loading="lazy" decoding="async" draggable="false">
+            </a>
+            <div class="cf__meta">
+              <h3 class="cf__title">LUMIÉ</h3>
+              <p class="cf__cat">ネイルサロン向けLP</p>
+              <p class="cf__desc">韓国トレンドネイルの世界観を、やわらかなピンクの配色で表現。LINE予約へ自然につながる導線設計。</p>
+            </div>
+          </li>
+          <li class="cf" data-work="kohi">
+            <a class="cf__card js-work" aria-label="KOH-I SEOUL">
+              <img src="images/works/kohi-seoul.webp" alt="KOH-I SEOUL カフェ向けLPのトップ画面" width="1440" height="900" loading="lazy" decoding="async" draggable="false">
+            </a>
+            <div class="cf__meta">
+              <h3 class="cf__title">KOH-I SEOUL</h3>
+              <p class="cf__cat">カフェ向けLP</p>
+              <p class="cf__desc">韓国カフェの世界観を、写真を活かしたミニマルなデザインで表現。</p>
+            </div>
+          </li>
+          <li class="cf" data-work="botanica">
+            <a class="cf__card js-work" aria-label="BOTANICA">
+              <img src="images/works/botanica.webp" alt="BOTANICA ヘアケア・シャンプーブランド向けLPのトップ画面" width="1440" height="900" loading="lazy" decoding="async" draggable="false">
+            </a>
+            <div class="cf__meta">
+              <h3 class="cf__title">BOTANICA</h3>
+              <p class="cf__cat">ヘアケア・シャンプーブランド向けLP</p>
+              <p class="cf__desc">美容ブランドらしい上質な配色と、商品の魅力を引き出すビジュアル構成。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="container works__info" aria-live="polite">
+        <div class="works__info-inner js-works-info"></div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Website Design</span><i></i><span>Hosting &amp; Support</span><i></i><span>LINE Official Account</span><i></i><span>Creative Design</span><i></i>
+        <span>Website Design</span><i></i><span>Hosting &amp; Support</span><i></i><span>LINE Official Account</span><i></i><span>Creative Design</span><i></i>
+      </div>
+    </div>
+
+    <!-- ============ COMPARE ============ -->
+    <section class="section compare" id="compare" aria-labelledby="compare-title">
+      <p class="wm" aria-hidden="true" data-wm>Compare</p>
+      <div class="container">
+        <div class="shead">
+          <p class="kicker" data-reveal>COMPARE</p>
+          <h2 class="shead__title" id="compare-title" data-split>お店に合った、<br>ホームページの持ち方を。</h2>
+          <p class="shead__lead" data-reveal>ホームページの持ち方は、大きく分けて3つあります。<br>お店に合った方法を選ぶ参考にしてください。</p>
+        </div>
+
+        <ul class="opt-legend" data-reveal aria-label="記号の見方">
+          <li><span class="mk mk--best" aria-hidden="true">◎</span>とても良い</li>
+          <li><span class="mk mk--good" aria-hidden="true">○</span>良い</li>
+          <li><span class="mk mk--weak" aria-hidden="true">△</span>手間や費用がかかる</li>
+        </ul>
+
+        <div class="opts">
+          <article class="opt" data-reveal>
+            <header class="opt__head">
+              <p class="opt__no">選択肢 1</p>
+              <h3 class="opt__title">自分で作る</h3>
+              <p class="opt__desc">ホームページ作成サービスを使い、自分で作成・更新する方法</p>
+            </header>
+            <div class="opt__row"><p class="opt__label">費用</p><p class="opt__val"><span class="mk mk--best" role="img" aria-label="とても良い">◎</span><span>無料〜月数千円で始められる</span></p></div>
+            <div class="opt__row"><p class="opt__label">作る手間</p><p class="opt__val"><span class="mk mk--weak" role="img" aria-label="手間や費用がかかる">△</span><span>文章・写真・設定まで、すべて自分で</span></p></div>
+            <div class="opt__row"><p class="opt__label">見た目</p><p class="opt__val"><span class="mk mk--weak" role="img" aria-label="手間や費用がかかる">△</span><span>用意されたテンプレートの範囲内</span></p></div>
+            <div class="opt__row"><p class="opt__label">公開後の修正</p><p class="opt__val"><span class="mk mk--weak" role="img" aria-label="手間や費用がかかる">△</span><span>自分で作業する</span></p></div>
+            <p class="opt__fit"><span>こんな方に</span>時間をかけてでも、費用をできるだけ抑えたい方</p>
+          </article>
+          <article class="opt" data-reveal>
+            <header class="opt__head">
+              <p class="opt__no">選択肢 2</p>
+              <h3 class="opt__title">制作会社に頼む</h3>
+              <p class="opt__desc">Web制作会社に依頼して、まとめて作ってもらう方法</p>
+            </header>
+            <div class="opt__row"><p class="opt__label">費用</p><p class="opt__val"><span class="mk mk--weak" role="img" aria-label="手間や費用がかかる">△</span><span>初期費用が数万〜数十万円かかることも</span></p></div>
+            <div class="opt__row"><p class="opt__label">作る手間</p><p class="opt__val"><span class="mk mk--best" role="img" aria-label="とても良い">◎</span><span>お任せできる</span></p></div>
+            <div class="opt__row"><p class="opt__label">見た目</p><p class="opt__val"><span class="mk mk--best" role="img" aria-label="とても良い">◎</span><span>オリジナルで作れる</span></p></div>
+            <div class="opt__row"><p class="opt__label">公開後の修正</p><p class="opt__val"><span class="mk mk--good" role="img" aria-label="良い">○</span><span>依頼できるが、都度見積もりが多い</span></p></div>
+            <p class="opt__fit"><span>こんな方に</span>予算をかけて、ページ数の多いサイトを作りたい方</p>
+          </article>
+          <article class="opt opt--us" data-reveal>
+            <header class="opt__head">
+              <p class="opt__no"><span class="opt__mark">yu.</span>YU DESIGN</p>
+              <h3 class="opt__title">YU DESIGNに頼む</h3>
+              <p class="opt__desc">制作から公開後の更新まで、月額でまとめてお任せいただく方法</p>
+            </header>
+            <div class="opt__row"><p class="opt__label">費用</p><p class="opt__val"><span class="mk mk--good" role="img" aria-label="良い">○</span><span>初期9,800円＋月3,300円から</span></p></div>
+            <div class="opt__row"><p class="opt__label">作る手間</p><p class="opt__val"><span class="mk mk--best" role="img" aria-label="とても良い">◎</span><span>お任せできる</span></p></div>
+            <div class="opt__row"><p class="opt__label">見た目</p><p class="opt__val"><span class="mk mk--best" role="img" aria-label="とても良い">◎</span><span>お店に合わせたオリジナル</span></p></div>
+            <div class="opt__row"><p class="opt__label">公開後の修正</p><p class="opt__val"><span class="mk mk--best" role="img" aria-label="とても良い">◎</span><span>LINEで送るだけ。月1〜2回は月額内</span></p></div>
+            <p class="opt__fit"><span>こんな方に</span>手間をかけずに、きちんとしたサイトを手頃に持ちたい方</p>
+          </article>
+        </div>
+        <p class="cmp__note" data-reveal>※ 費用は一般的な目安です。実際の内容はサービスや依頼先によって異なります。</p>
+      </div>
+    </section>
+
+    <!-- ============ PRICE ============ -->
+    <section class="section price" id="price" aria-labelledby="price-title">
+      <p class="wm" aria-hidden="true" data-wm>Price</p>
+      <div class="container">
+        <div class="shead">
+          <p class="kicker" data-reveal>PRICE</p>
+          <h2 class="shead__title" id="price-title" data-split>必要なものを、<br>必要な分だけ。</h2>
+          <p class="shead__lead" data-reveal>初期費用を抑え、公開後の管理も任せられる料金体系。<br>価格を隠さず、安心してご相談いただけるようにしています。</p>
+        </div>
+
+        <div class="plans">
+          <article class="plan plan--featured" data-reveal aria-labelledby="plan-basic">
+            <p class="plan__badge">はじめての方に</p>
+            <header class="plan__head">
+              <h3 class="plan__name" id="plan-basic">BASIC PLAN</h3>
+              <p class="plan__desc">縦長1ページのサイト（LP形式）。<br>お店の情報を1ページにまとめます。</p>
+            </header>
+            <dl class="plan__prices">
+              <div>
+                <dt>初期制作費</dt>
+                <dd><span class="num">9,800</span><span class="yen">円</span><small>（税込）</small></dd>
+              </div>
+              <div>
+                <dt>月額管理費</dt>
+                <dd><span class="num">3,300</span><span class="yen">円</span><small>（税込）</small></dd>
+              </div>
+            </dl>
+            <p class="plan__term">最低契約期間 6か月</p>
+            <ul class="plan__list" role="list">
+              <li>縦長1ページのオリジナルサイト（LP形式）</li>
+              <li>スマートフォン対応</li>
+              <li>店舗情報・サービス紹介</li>
+              <li>LINE・電話・地図へのリンク</li>
+              <li>ドメイン接続</li>
+              <li>サーバー費用0円</li>
+              <li>SSL設定</li>
+              <li>月1回の軽微な修正（15分程度）</li>
+            </ul>
+          </article>
+
+          <article class="plan" data-reveal aria-labelledby="plan-standard">
+            <p class="plan__badge plan__badge--sub">情報量の多いお店に</p>
+            <header class="plan__head">
+              <h3 class="plan__name" id="plan-standard">STANDARD PLAN</h3>
+              <p class="plan__desc">トップ＋2ページの複数ページ構成。<br>メニューが多いなど、情報量の多いお店に。</p>
+            </header>
+            <dl class="plan__prices">
+              <div>
+                <dt>初期制作費</dt>
+                <dd><span class="num">19,800</span><span class="yen">円</span><small>（税込）</small></dd>
+              </div>
+              <div>
+                <dt>月額管理費</dt>
+                <dd><span class="num">5,500</span><span class="yen">円</span><small>（税込）</small></dd>
+              </div>
+            </dl>
+            <p class="plan__term">最低契約期間 6か月</p>
+            <ul class="plan__list" role="list">
+              <li>トップ＋2ページ（メニュー・アクセスなど）</li>
+              <li>オリジナルデザイン</li>
+              <li>スマートフォン対応</li>
+              <li>店舗紹介・メニュー・アクセス</li>
+              <li>LINE・電話への導線</li>
+              <li>ドメイン接続</li>
+              <li>サーバー費用0円</li>
+              <li>SSL設定</li>
+              <li>月2回の軽微な修正（各15分程度）</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="price__foot" data-reveal>
+          <div class="price__notes">
+            <h3 class="price__notes-title">ご確認ください</h3>
+            <ul role="list">
+              <li>現在の価格は開業記念のモニター価格です。今後、改定する場合があります。</li>
+              <li>サーバー費用はかかりません。ドメインとアカウントはお客様名義で、初回のみご自身で登録していただきます（YU DESIGNが隣でご案内します）。ドメインの取得・更新費用のみ実費（.comの場合で年1,700円前後）です。</li>
+              <li>ページ追加・大幅なデザイン変更は別途お見積もりとなります。</li>
+              <li>予約・決済機能などは個別にお見積もりします。</li>
+              <li>月額管理に含まれる修正は、各プランに記載の回数・作業時間（1回15分程度）の軽微な修正です。</li>
+              <li>初期制作費は、6か月以上ご利用いただくことを前提にした価格です。6か月以内に解約される場合は、制作費の精算金（BASIC：2,500円×残り月数／STANDARD：4,000円×残り月数）をお願いしています。7か月目以降は1か月単位で解約できます。</li>
+              <li>一つひとつ丁寧に制作するため、新規制作のお受けは毎月3件までとしています。</li>
+            </ul>
+          </div>
+          <div class="price__cta">
+            <p>どちらがいいか分からない方は、<br class="sp-only">LINEでお気軽にご相談ください。</p>
+            <a class="pill pill--line js-line" data-magnetic role="link"><img class="line-logo" src="assets/line-icon.png" alt="" width="24" height="24" aria-hidden="true">LINEで無料相談</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FLOW ============ -->
+    <section class="section flow" id="flow" aria-labelledby="flow-title">
+      <div class="container">
+        <div class="shead">
+          <p class="kicker" data-reveal>FLOW</p>
+          <h2 class="shead__title shead__title--xl" id="flow-title" data-split>制作の流れ</h2>
+          <p class="shead__lead" data-reveal>ご相談から公開、その後の運用まで。<br>シンプルでスムーズに進めます。</p>
+        </div>
+        <ol class="flow__list" data-line>
+          <li class="step">
+            <span class="step__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 8.5C5 7.1 6.1 6 7.5 6h17C25.9 6 27 7.1 27 8.5v11c0 1.4-1.1 2.5-2.5 2.5H14l-6 4.5V22h-.5C6.1 22 5 20.9 5 19.5z"/><path d="M11 13h10M11 16.5h6"/></svg></span>
+            <span class="step__dot" aria-hidden="true"></span>
+            <span class="step__num">01</span>
+            <h3 class="step__title">お問い合わせ</h3>
+            <p class="step__text">LINEからお問い合わせ。</p>
+          </li>
+          <li class="step">
+            <span class="step__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="8" y="5.5" width="16" height="22" rx="1.5"/><path d="M12.5 5.5V4h7v1.5"/><path d="M12 12h8M12 16h8M12 20h5"/></svg></span>
+            <span class="step__dot" aria-hidden="true"></span>
+            <span class="step__num">02</span>
+            <h3 class="step__title">ヒアリング</h3>
+            <p class="step__text">店舗の特徴・希望デザイン・掲載情報をヒアリング。</p>
+          </li>
+          <li class="step">
+            <span class="step__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="4.5" y="7" width="23" height="15" rx="1.5"/><path d="M12 26h8M16 22v4"/><path d="M10 17.5l3-4 2.5 3 2-2 3.5 3"/></svg></span>
+            <span class="step__dot" aria-hidden="true"></span>
+            <span class="step__num">03</span>
+            <h3 class="step__title">デザイン・制作</h3>
+            <p class="step__text">デザイン制作・コーディング。</p>
+          </li>
+          <li class="step">
+            <span class="step__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><path d="M11 16.3l3.3 3.2 6.7-6.8"/></svg></span>
+            <span class="step__dot" aria-hidden="true"></span>
+            <span class="step__num">04</span>
+            <h3 class="step__title">確認・修正</h3>
+            <p class="step__text">お客様に確認していただき、必要な修正を実施。</p>
+          </li>
+          <li class="step">
+            <span class="step__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><path d="M5 16h22M16 5c3 3 4.5 6.8 4.5 11S19 24 16 27c-3-3-4.5-6.8-4.5-11S13 8 16 5z"/></svg></span>
+            <span class="step__dot" aria-hidden="true"></span>
+            <span class="step__num">05</span>
+            <h3 class="step__title">公開</h3>
+            <p class="step__text">ドメイン接続・SSL設定・公開。</p>
+          </li>
+          <li class="step">
+            <span class="step__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M25.5 13A10 10 0 0 0 7.8 9.5M6.5 19a10 10 0 0 0 17.7 3.5"/><path d="M7 5v5h5M25 27v-5h-5"/></svg></span>
+            <span class="step__dot" aria-hidden="true"></span>
+            <span class="step__num">06</span>
+            <h3 class="step__title">サポート</h3>
+            <p class="step__text">公開後も更新・管理を継続サポート。</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq__grid">
+        <div class="shead">
+          <p class="kicker" data-reveal>FAQ</p>
+          <h2 class="shead__title" id="faq-title" data-split>よくある<br>ご質問</h2>
+          <p class="shead__lead" data-reveal>はじめての方からよくいただく質問をまとめました。</p>
+        </div>
+        <div class="faq__list">
+          <details class="qa" data-reveal>
+            <summary><span class="qa__q">Q</span><span class="qa__text">ホームページの知識がなくても大丈夫ですか？</span><span class="qa__icon" aria-hidden="true"></span></summary>
+            <div class="qa__a"><span class="qa__mark">A</span><p>問題ありません。必要な情報をお伺いし、制作から公開までサポートします。</p></div>
+          </details>
+          <details class="qa" data-reveal>
+            <summary><span class="qa__q">Q</span><span class="qa__text">ドメインやサーバーの契約も必要ですか？</span><span class="qa__icon" aria-hidden="true"></span></summary>
+            <div class="qa__a"><span class="qa__mark">A</span><p>サーバー費用は0円です。初回のお打ち合わせで、お客様ご自身のスマートフォンからアカウント登録とドメイン取得をしていただきます（15〜20分ほど。YU DESIGNが隣でご案内します）。ドメイン代（.comの場合で年1,700円前後）は、お客様から直接お支払いいただく実費です。その後の設定・公開・管理はすべてYU DESIGNが行います。</p></div>
+          </details>
+          <details class="qa" data-reveal>
+            <summary><span class="qa__q">Q</span><span class="qa__text">スマートフォンにも対応していますか？</span><span class="qa__icon" aria-hidden="true"></span></summary>
+            <div class="qa__a"><span class="qa__mark">A</span><p>はい。スマートフォン・タブレット・PCに対応したレスポンシブデザインで制作します。</p></div>
+          </details>
+          <details class="qa" data-reveal>
+            <summary><span class="qa__q">Q</span><span class="qa__text">公開後に修正できますか？</span><span class="qa__icon" aria-hidden="true"></span></summary>
+            <div class="qa__a"><span class="qa__mark">A</span><p>はい。プランに応じた軽微な修正を月額管理費内で対応します。</p></div>
+          </details>
+          <details class="qa" data-reveal>
+            <summary><span class="qa__q">Q</span><span class="qa__text">制作期間はどのくらいですか？</span><span class="qa__icon" aria-hidden="true"></span></summary>
+            <div class="qa__a"><span class="qa__mark">A</span><p>掲載内容やページ数によって異なります。ヒアリング後に目安をご案内します。</p></div>
+          </details>
+          <details class="qa" data-reveal>
+            <summary><span class="qa__q">Q</span><span class="qa__text">最低契約期間はありますか？</span><span class="qa__icon" aria-hidden="true"></span></summary>
+            <div class="qa__a"><span class="qa__mark">A</span><p>6か月です。初期制作費を抑えた分を月額でいただく仕組みのため、6か月以内に解約される場合は、残り月数に応じた制作費の精算金をお願いしています（BASIC：2,500円×残り月数／STANDARD：4,000円×残り月数）。7か月目以降は1か月単位で解約できます。</p></div>
+          </details>
+          <details class="qa" data-reveal>
+            <summary><span class="qa__q">Q</span><span class="qa__text">連絡への返信や修正には、どのくらいかかりますか？</span><span class="qa__icon" aria-hidden="true"></span></summary>
+            <div class="qa__a"><span class="qa__mark">A</span><p>LINEでのご連絡には、原則24時間以内に返信します。軽微な修正は、内容を確認したうえで数日以内に反映します。</p></div>
+          </details>
+          <details class="qa" data-reveal>
+            <summary><span class="qa__q">Q</span><span class="qa__text">解約後はホームページをどうなりますか？</span><span class="qa__icon" aria-hidden="true"></span></summary>
+            <div class="qa__a"><span class="qa__mark">A</span><p>ドメインとアカウントはもともとお客様名義のため、そのままお使いいただけます。YU DESIGNの管理権限を外し、ご希望に応じてサイトデータ一式をお渡しします。</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <p class="wm wm--contact" aria-hidden="true" data-wm>Contact</p>
+      <figure class="contact__visual" aria-hidden="true"><img src="images/common/contact-bg.webp" alt="" width="2400" height="1351" loading="lazy" decoding="async" data-parallax-img></figure>
+      <div class="container contact__inner">
+        <p class="kicker" data-reveal>CONTACT</p>
+        <h2 class="shead__title shead__title--xl" id="contact-title" data-split>まずはお気軽に<br>ご相談ください。</h2>
+        <p class="contact__lead" data-reveal>あなたのお店の魅力を、Webでもっと伝えませんか？</p>
+        <p class="contact__text" data-reveal>ホームページ制作のご相談・お見積もりは無料です。<br>まずはお気軽にLINEからお問い合わせください。</p>
+        <div class="contact__cta" data-reveal>
+          <a class="pill pill--dark pill--lg js-line" role="link" data-magnetic><img class="line-logo" src="assets/line-icon.png" alt="" width="24" height="24" aria-hidden="true">LINEで無料相談する<span class="pill__arrow" aria-hidden="true"></span></a>
+          <a class="pill pill--outline pill--lg" href="#price" data-magnetic>料金プランを見る<span class="pill__arrow" aria-hidden="true"></span></a>
+        </div>
+        <p class="line-status" hidden>LINE公式アカウントは現在準備中です。公開まで今しばらくお待ちください。</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a class="footer__logo" href="#top" aria-label="YU DESIGN トップへ戻る"><span class="logo__mark" aria-hidden="true">yu.</span><span class="footer__sub" aria-hidden="true">YU DESIGN</span></a>
+      <nav aria-label="フッターナビゲーション">
+        <ul class="footer__nav">
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#services">SERVICES</a></li>
+          <li><a href="#works">WORKS</a></li>
+          <li><a href="#price">PRICE</a></li>
+          <li><a href="#flow">FLOW</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+      <a class="footer__line js-line" role="link" aria-label="LINE公式アカウント"><img class="line-logo" src="assets/line-icon.png" alt="" width="24" height="24" aria-hidden="true"></a>
+      <p class="footer__tag">Design that moves business forward.</p>
+      <p class="footer__copy"><small>Copyright © YU DESIGN. All Rights Reserved.</small></p>
+    </div>
+    <p class="footer__big" aria-hidden="true">yu.</p>
+  </footer>
+
+  <!-- Mobile sticky CTA -->
+  <div class="sticky-cta" aria-hidden="true">
+    <a class="pill pill--line pill--block js-line" role="link" tabindex="-1"><img class="line-logo" src="assets/line-icon.png" alt="" width="24" height="24" aria-hidden="true">LINEで無料相談</a>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/hero-gl.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
