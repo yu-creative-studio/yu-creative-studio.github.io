@@ -16,7 +16,7 @@ window.SITE_CONFIG = {
   lineUrl: "https://lin.ee/7rMoP1g",
 
   works: {
-    moranbon: "https://yu-creative-studio.github.io/moranbon/",
+    moranbon: "https://moranbong-yakiniku.com/",
     rezard: null,   // 例) "https://yu-creative-studio.github.io/rezard_gym/"
     kohi: null,     // 例) "https://yu-creative-studio.github.io/kohi-seoul/"
     botanica: null, // 例) "https://yu-creative-studio.github.io/botanica/"
