@@ -17,9 +17,9 @@ window.SITE_CONFIG = {
 
   works: {
     moranbon: "https://moranbong-yakiniku.com/",
-    rezard: null,   // 例) "https://yu-creative-studio.github.io/rezard_gym/"
-    kohi: null,     // 例) "https://yu-creative-studio.github.io/kohi-seoul/"
-    botanica: null, // 例) "https://yu-creative-studio.github.io/botanica/"
+    rezard: "https://yu-creative-studio.github.io/rezard_gym/",
+    kohi: "https://yu-creative-studio.github.io/kohi-seoul/",
+    botanica: "https://yu-creative-studio.github.io/botanica/",
     lumie: "https://yu-creative-studio.github.io/lumiere-lp/"
   }
 };

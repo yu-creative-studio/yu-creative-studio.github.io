@@ -698,3 +698,5 @@ html:not(.js) .loader, .loader.is-skip { display: none; }
   .price__cta .pill { width: 100%; }
 
 }
+
+.works__note { display: block; margin-top: 10px; font-size: 12px; color: var(--sub); line-height: 1.8; }
