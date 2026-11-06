@@ -296,7 +296,7 @@ html:not(.js) .loader, .loader.is-skip { display: none; }
    ========================================================= */
 .services { background: var(--bg-2); overflow: hidden; }
 .wm--services { right: -3vw; top: clamp(90px, 11vw, 170px); }
-.svc-list { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(14px, 1.6vw, 24px); perspective: 1200px; }
+.svc-list { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(14px, 1.6vw, 24px); perspective: 1200px; }
 .svc {
   --rx: 0deg; --ry: 0deg; --mx: 50%; --my: 50%;
   position: relative; display: flex; flex-direction: column; background: var(--card);
@@ -573,7 +573,7 @@ html:not(.js) .loader, .loader.is-skip { display: none; }
 @media (max-width: 1100px) {
   .gnav { display: none; }
   .header__cta { margin-left: auto; }
-  .svc-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .svc-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .strength__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .str:nth-child(3) { padding-left: 0; border-left: 0; }
   .str:nth-child(n+3) { border-top: 1px solid var(--line); margin-top: 24px; }
