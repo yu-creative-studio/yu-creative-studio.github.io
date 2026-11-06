@@ -37,6 +37,19 @@
     el.innerHTML = parts.map(function (p, i) { return '<span class="sl" style="--l:' + i + '"><span>' + p.trim() + "</span></span>"; }).join("");
   });
 
+  $$("[data-wmchars]").forEach(function (el) {
+    var t = el.textContent; el.textContent = "";
+    t.split("").forEach(function (c, i) { var s = document.createElement("span"); s.className = "wch"; s.style.setProperty("--i", i); s.textContent = c; el.appendChild(s); });
+  });
+  // per-item indices for staggered inner animations
+  $$(".opt").forEach(function (o) { $$(".opt__row", o).forEach(function (r, i) { r.style.setProperty("--r", i); }); });
+  $$(".plan").forEach(function (p) { $$(".plan__list li", p).forEach(function (li, i) { li.style.setProperty("--li", i); }); });
+  $$(".contact__cta .pill").forEach(function (b, i) { b.style.setProperty("--b", i); });
+  // spotlight follows the pointer on cards
+  if (window.matchMedia("(hover: hover)").matches) $$(".plan, .opt, .opt-card, .qa").forEach(function (el) {
+    el.addEventListener("pointermove", function (e) { var r = el.getBoundingClientRect(); el.style.setProperty("--sx", (e.clientX - r.left) + "px"); el.style.setProperty("--sy", (e.clientY - r.top) + "px"); });
+  });
+
   /* ---------- Reveal on scroll ---------- */
   $$(".svc-list, .strength__list, .opts, .plans, .faq__list").forEach(function (list) {
     $$(":scope > [data-reveal]", list).forEach(function (el, i) { el.style.setProperty("--d", (i % 6) * 0.1 + "s"); });
@@ -278,8 +291,13 @@
   /* ---------- Scroll-driven engine ---------- */
   var progress = $(".progress"), sticky = $(".sticky-cta"), contact = $("#contact");
   var wms = $$("[data-wm]"), pimgs = $$("[data-parallax-img]");
-  var marquee = $(".marquee__track"), mqX = 0, mqSpeed = 0;
-  var flowList = $(".flow__list"), steps = $$(".step");
+  var mqSpeed = 0, mqs = $$(".marquee__track").map(function (el) { return { el: el, x: 0, dir: el.getAttribute("data-dir") === "1" ? -1 : 1, parts: el.parentElement.classList.contains("marquee--cta") ? 3 : 2 }; });
+  var footer = $(".footer"), mainEl = $("#main");
+  var flowList = $(".flow__list"), steps = $$(".step"), flowRunner = null;
+  if (flowList) { flowRunner = document.createElement("span"); flowRunner.className = "flow__runner"; flowRunner.setAttribute("aria-hidden", "true"); flowList.appendChild(flowRunner); }
+  // footer curtain reveal (only when the footer fits on screen)
+  var setCurtain = function () { if (!footer) return; doc.classList.toggle("has-curtain", !reduce && window.innerWidth >= 768 && footer.offsetHeight < window.innerHeight * .9); };
+  setCurtain(); window.addEventListener("resize", setCurtain);
   var heroInner = $(".hero__inner"), heroScroll = $(".hero__scroll");
   var lastY = window.scrollY, vel = 0, sy = window.scrollY;
 
@@ -322,13 +340,29 @@
         var p = (r.top + r.height / 2 - vh / 2) / vh;
         img.style.transform = "translate3d(0," + (p * -60).toFixed(1) + "px,0)";
       });
-      // marquee reacts to scroll velocity
-      if (marquee) {
-        mqSpeed = lerp(mqSpeed, 1 + Math.min(Math.abs(vel) * .35, 12), .1);
-        mqX -= mqSpeed * .6 * (vel < -0.5 ? -1 : 1);
-        var half = marquee.scrollWidth / 2; if (half) { if (mqX <= -half) mqX += half; if (mqX > 0) mqX -= half; }
-        marquee.style.transform = "translate3d(" + mqX.toFixed(1) + "px,0,0) skewX(" + clamp(-vel * .25, -10, 10).toFixed(2) + "deg)";
+      // marquees react to scroll velocity
+      mqSpeed = lerp(mqSpeed, 1 + Math.min(Math.abs(vel) * .35, 12), .1);
+      mqs.forEach(function (m) {
+        var r = m.el.parentElement.getBoundingClientRect(); if (r.bottom < -50 || r.top > vh + 50) return;
+        var parts = m.parts || 2;
+        m.x -= mqSpeed * .6 * m.dir * (vel < -0.5 ? -1 : 1);
+        var unit = m.el.scrollWidth / parts; if (unit) { if (m.x <= -unit) m.x += unit; if (m.x > 0) m.x -= unit; }
+        m.el.style.transform = "translate3d(" + m.x.toFixed(1) + "px,0,0) skewX(" + clamp(-vel * .25 * m.dir, -12, 12).toFixed(2) + "deg)";
+      });
+      // ---- latter-half scrubs ----
+      if (contact) {
+        var cr = contact.getBoundingClientRect();
+        if (cr.top < vh * 1.2 && cr.bottom > -100) {
+          var cp = clamp(1 - cr.top / vh, 0, 1);
+          contact.style.setProperty("--cp", (1 - Math.pow(1 - cp, 3)).toFixed(4));
+          if (cp > .45) contact.classList.add("is-lit");
+        }
       }
+      if (footer && mainEl) {
+        var mb = mainEl.getBoundingClientRect().bottom;
+        if (mb < vh + 10) footer.style.setProperty("--fp", clamp((vh - mb) / Math.max(1, footer.offsetHeight), 0, 1).toFixed(4));
+      }
+      if (flowRunner && flowList) flowRunner.classList.toggle("is-run", Math.abs(vel) > .6);
     }
     // flow line progress
     if (flowList) {

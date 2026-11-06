@@ -29,6 +29,7 @@
   --ease: cubic-bezier(.22, .61, .36, 1);
   --ease-out: cubic-bezier(.16, 1, .3, 1);
   --ease-io: cubic-bezier(.76, 0, .24, 1);
+  --acc: #9A8466;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -753,4 +754,93 @@ html:not(.js) .loader, .loader.is-skip { display: none; }
   .opt-row__meter { grid-column: 1 / -1; grid-row: 2; }
   .opt-card__foot { padding: 14px 22px; }
   .opt-legend { margin-top: 4px; }
+}
+
+/* =========================================================
+   LATTER-HALF FX (compare / price / flow / faq / contact / footer)
+   ========================================================= */
+/* spotlight that follows the pointer */
+.plan, .opt, .opt-card, .qa { position: relative; }
+.plan::after, .opt::after, .opt-card::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .5s; background: radial-gradient(420px circle at var(--sx, 50%) var(--sy, 50%), rgba(154,132,102,.16), transparent 60%); z-index: 2; }
+.opt--us::after, .plan--featured::after { background: radial-gradient(420px circle at var(--sx, 50%) var(--sy, 50%), rgba(255,255,255,.14), transparent 60%); }
+.plan:hover::after, .opt:hover::after, .opt-card:hover::after { opacity: 1; }
+
+/* compare: cards fall into place in 3D */
+.js .opts > .opt[data-reveal] { opacity: 0; transform: perspective(1400px) rotateX(52deg) translateY(110px) scale(.9); transform-origin: 50% 0; transition: opacity 1s var(--ease), transform 1.7s var(--ease-out); transition-delay: var(--d, 0s); }
+.js .opts > .opt[data-reveal].is-in { opacity: 1; transform: none; }
+.js .opt .mk { transform: scale(0) rotate(-120deg); transition: transform .9s cubic-bezier(.34,1.56,.64,1); transition-delay: calc(var(--d, 0s) + .7s + var(--r, 0) * .12s); }
+.js .opt.is-in .mk { transform: none; }
+.opt--us { overflow: hidden; }
+.opt--us::before { content: ""; position: absolute; top: -20%; bottom: -20%; left: -60%; width: 40%; background: linear-gradient(100deg, transparent, rgba(255,255,255,.18), transparent); transform: skewX(-18deg); pointer-events: none; z-index: 3; }
+.js .opt--us.is-in::before { animation: yu-sheen 1.6s var(--ease-io) 1.2s 1 both; }
+@keyframes yu-sheen { from { left: -60%; } to { left: 140%; } }
+
+/* price: plans swing in from both sides */
+.js .plans > .plan[data-reveal] { opacity: 0; transition: opacity 1s var(--ease), transform 1.8s var(--ease-out); transition-delay: var(--d, 0s); }
+.js .plans > .plan[data-reveal]:nth-child(1) { transform: perspective(1600px) rotateY(28deg) translate3d(-90px, 70px, 0); transform-origin: 0 50%; }
+.js .plans > .plan[data-reveal]:nth-child(2) { transform: perspective(1600px) rotateY(-28deg) translate3d(90px, 70px, 0); transform-origin: 100% 50%; }
+.js .plans > .plan[data-reveal].is-in { opacity: 1; transform: none; }
+.js .plan .plan__list li { opacity: 0; transform: translateX(-22px); transition: opacity .7s var(--ease), transform .9s var(--ease-out); transition-delay: calc(.8s + var(--li, 0) * .07s); }
+.js .plan.is-in .plan__list li { opacity: 1; transform: none; }
+.js .plan .plan__list li::before { transform: scale(0) rotate(-135deg); transition: transform .6s cubic-bezier(.34,1.56,.64,1); transition-delay: calc(1s + var(--li, 0) * .07s); }
+.js .plan.is-in .plan__list li::before { transform: rotate(-45deg); }
+.plan--featured { overflow: visible; }
+.js .plan--featured .plan__head { position: relative; overflow: hidden; }
+.js .plan--featured .plan__head::before { content: ""; position: absolute; top: 0; bottom: 0; left: -60%; width: 35%; background: linear-gradient(100deg, transparent, rgba(255,255,255,.16), transparent); transform: skewX(-18deg); pointer-events: none; }
+.js .plan--featured.is-in .plan__head::before { animation: yu-sheen 1.6s var(--ease-io) 1.1s 1 both; }
+.js .opt-card[data-reveal] { transform: translateY(80px) scale(.94); transition: opacity 1s var(--ease), transform 1.6s var(--ease-out); }
+.js .opt-card[data-reveal].is-in { transform: none; }
+
+/* flow: icons spring in, a glowing runner rides the line */
+.js .step .step__icon { transform: scale(.4) rotate(-35deg); opacity: .2; transition: transform 1s cubic-bezier(.34,1.56,.64,1), opacity .6s; }
+.js .step.is-on .step__icon { transform: none; opacity: 1; }
+.js .step.is-on .step__dot { animation: yu-ping 1s var(--ease-out) 1; }
+@keyframes yu-ping { 0% { box-shadow: 0 0 0 0 rgba(23,23,23,.35); } 100% { box-shadow: 0 0 0 16px rgba(23,23,23,0); } }
+.flow__runner { position: absolute; z-index: 2; top: 78px; left: calc(100% / 12 + (100% - 100% / 6) * var(--p, 0)); width: 15px; height: 15px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--ink); box-shadow: 0 0 0 6px rgba(23,23,23,.08), 0 0 24px 6px rgba(154,132,102,.45); pointer-events: none; transition: transform .4s var(--ease-out); opacity: calc(min(1, var(--p, 0) * 30)); }
+.flow__runner.is-run { transform: scale(1.5); }
+.flow__runner::after { content: ""; position: absolute; inset: -9px; border-radius: 50%; border: 1px solid rgba(23,23,23,.35); animation: yu-ring 1.8s var(--ease-out) infinite; }
+@keyframes yu-ring { from { transform: scale(.4); opacity: 1; } to { transform: scale(1.6); opacity: 0; } }
+
+/* faq: questions slide in from the right with blur */
+.js .faq__list > .qa[data-reveal] { opacity: 0; transform: translate3d(120px, 0, 0) rotate(1.5deg); filter: blur(8px); transition: opacity 1s var(--ease), transform 1.4s var(--ease-out), filter 1.1s var(--ease); transition-delay: var(--d, 0s); }
+.js .faq__list > .qa[data-reveal].is-in { opacity: 1; transform: none; filter: none; }
+.js .qa .qa__q { display: inline-block; transform: rotate(-180deg) scale(.3); transition: transform 1.1s cubic-bezier(.34,1.56,.64,1); transition-delay: calc(var(--d, 0s) + .3s); }
+.js .qa.is-in .qa__q { transform: none; }
+.qa summary { transition: padding-left .5s var(--ease-out); }
+.qa:hover summary { padding-left: 10px; }
+
+/* cta marquee: giant outlined line before contact */
+.marquee--cta { background: var(--dark); border: 0; padding-block: clamp(28px, 4vw, 56px); }
+.marquee--cta .marquee__track span { font-size: clamp(64px, 11vw, 190px); color: var(--bg); }
+.marquee--cta .marquee__track span:nth-of-type(even) { color: transparent; -webkit-text-stroke: 1px rgba(245,242,236,.55); }
+.marquee--cta .marquee__track i { background: var(--acc, #9A8466); }
+
+/* contact: photo opens like a window, title letters rise */
+.contact { --cp: 0; }
+.js .contact__visual { clip-path: inset(calc((1 - var(--cp)) * 14%) calc((1 - var(--cp)) * 10%) round calc((1 - var(--cp)) * 56px)); }
+.js .contact__visual img { transform: scale(calc(1.32 - var(--cp) * .32)); }
+.wch { display: inline-block; }
+.js [data-wmchars] .wch { transform: translate3d(0, 105%, 0) rotate(10deg); transition: transform 1.4s var(--ease-out); transition-delay: calc(var(--i) * .07s); }
+.js .contact.is-lit [data-wmchars] .wch { transform: none; }
+.js .contact__cta .pill { opacity: 0; transform: translateY(30px) scale(.9); transition: opacity .8s var(--ease), transform 1.1s cubic-bezier(.34,1.56,.64,1); transition-delay: calc(.3s + var(--b, 0) * .12s); }
+.js .contact__cta.is-in .pill { opacity: 1; transform: none; }
+
+/* footer curtain reveal */
+.has-curtain main { position: relative; z-index: 1; background: var(--bg); box-shadow: 0 50px 80px -30px rgba(0,0,0,.5); }
+.has-curtain .footer { position: sticky; bottom: 0; z-index: 0; }
+.footer { --fp: 0; }
+.js .footer .footer__big .wch { transform: translate3d(0, calc((1 - var(--fp)) * 60%), 0); transition: none; }
+.js .footer .footer__big { color: rgba(245,242,236, calc(.03 + var(--fp) * .05)); }
+.js .footer__inner > * { opacity: calc(.15 + var(--fp) * 1.2); transform: translateY(calc((1 - var(--fp)) * 40px)); }
+
+@media (max-width: 767px) {
+  .flow__runner { display: none; }
+  .js .plans > .plan[data-reveal]:nth-child(n) { transform: perspective(1200px) rotateX(30deg) translateY(80px); transform-origin: 50% 0; }
+  .js .faq__list > .qa[data-reveal] { transform: translate3d(60px, 0, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .opts > .opt[data-reveal], .js .plans > .plan[data-reveal], .js .faq__list > .qa[data-reveal], .js .opt .mk, .js .plan .plan__list li, .js .step .step__icon, .js .qa .qa__q, .js [data-wmchars] .wch, .js .contact__cta .pill, .js .opt-card[data-reveal] { opacity: 1 !important; transform: none !important; filter: none !important; transition: none !important; }
+  .js .contact__visual { clip-path: none; } .js .contact__visual img { transform: none; }
+  .flow__runner { display: none; }
+  .js .footer__inner > * { opacity: 1; transform: none; }
 }
