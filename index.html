@@ -397,16 +397,10 @@
               <h3 class="plan__name" id="plan-basic">BASIC PLAN</h3>
               <p class="plan__desc">縦長1ページのサイト（LP形式）。<br>お店の情報を1ページにまとめます。</p>
             </header>
-            <dl class="plan__prices">
-              <div>
-                <dt>初期制作費</dt>
-                <dd><span class="num">9,800</span><span class="yen">円</span><small>（税込）</small></dd>
-              </div>
-              <div>
-                <dt>月額管理費</dt>
-                <dd><span class="num">3,300</span><span class="yen">円</span><small>（税込）</small></dd>
-              </div>
-            </dl>
+            <div class="plan__prices">
+              <p class="plan__price-main"><span class="plan__price-label">月額</span><span class="num">3,300</span><span class="yen">円</span><small>（税込）</small></p>
+              <p class="plan__price-sub"><span>初期制作費</span><b>9,800円</b><small>（税込）</small></p>
+            </div>
             <p class="plan__term">最低契約期間 6か月</p>
             <ul class="plan__list" role="list">
               <li>縦長1ページのオリジナルサイト（LP形式）</li>
@@ -426,16 +420,10 @@
               <h3 class="plan__name" id="plan-standard">STANDARD PLAN</h3>
               <p class="plan__desc">トップ＋2ページの複数ページ構成。<br>メニューが多いなど、情報量の多いお店に。</p>
             </header>
-            <dl class="plan__prices">
-              <div>
-                <dt>初期制作費</dt>
-                <dd><span class="num">19,800</span><span class="yen">円</span><small>（税込）</small></dd>
-              </div>
-              <div>
-                <dt>月額管理費</dt>
-                <dd><span class="num">5,500</span><span class="yen">円</span><small>（税込）</small></dd>
-              </div>
-            </dl>
+            <div class="plan__prices">
+              <p class="plan__price-main"><span class="plan__price-label">月額</span><span class="num">5,500</span><span class="yen">円</span><small>（税込）</small></p>
+              <p class="plan__price-sub"><span>初期制作費</span><b>19,800円</b><small>（税込）</small></p>
+            </div>
             <p class="plan__term">最低契約期間 6か月</p>
             <ul class="plan__list" role="list">
               <li>トップ＋2ページ（メニュー・アクセスなど）</li>
@@ -483,24 +471,43 @@
           <p class="opt-card__foot">メニューや季節のお知らせをよく変えるお店に。月単位で追加・解除できます。</p>
         </article>
 
-        <div class="price__foot" data-reveal>
-          <div class="price__notes">
-            <h3 class="price__notes-title">ご確認ください</h3>
-            <ul role="list">
-              <li>現在の価格は開業記念のモニター価格です。今後、改定する場合があります。</li>
-              <li>サーバー費用はかかりません。ドメインとアカウントはお客様名義で、初回のみご自身で登録していただきます（YU DESIGNが隣でご案内します）。ドメインの取得・更新費用のみ実費（.comの場合で年1,700円前後）です。</li>
-              <li>ページ追加・大幅なデザイン変更は別途お見積もりとなります。</li>
-              <li>予約・決済機能などは個別にお見積もりします。</li>
-              <li>月額管理に含まれる修正は、各プランに記載の回数の軽微な修正（営業時間・料金・文章・写真の差し替えなど）です。レイアウトの変更やコンテンツの追加は別途お見積もりとなります。</li>
-              <li>月の回数を超える修正は、修正回数アップオプションのご利用、または別途お見積もりとなります。オプションは月単位で追加・解除できます。</li>
-              <li>初期制作費は、6か月以上ご利用いただくことを前提にした価格です。6か月以内に解約される場合は、制作費の精算金（BASIC：2,500円×残り月数／STANDARD：4,000円×残り月数）をお願いしています。7か月目以降は1か月単位で解約できます。</li>
-              <li>一つひとつ丁寧に制作するため、新規制作のお受けは毎月3件までとしています。</li>
-            </ul>
+        <div class="price-notes" data-reveal>
+          <h3 class="price-notes__title">ご確認ください</h3>
+          <div class="price-notes__grid">
+            <section class="price-notes__col">
+              <p class="price-notes__en">Fee</p>
+              <h4>料金について</h4>
+              <ul role="list">
+                <li>現在の価格は開業記念のモニター価格です。今後、改定する場合があります。</li>
+                <li>サーバー費用はかかりません。かかるのはドメイン代の実費のみ（.comで年1,700円前後）です。</li>
+                <li>ドメインとアカウントはお客様名義です。初回のみご自身で登録していただきます（YU DESIGNが隣でご案内します）。</li>
+                <li>ページ追加・大幅なデザイン変更、予約・決済機能などは別途お見積もりです。</li>
+              </ul>
+            </section>
+            <section class="price-notes__col">
+              <p class="price-notes__en">Edits</p>
+              <h4>修正について</h4>
+              <ul role="list">
+                <li>月額に含まれるのは、プランに記載の回数の軽微な修正です（営業時間・料金・文章・写真の差し替えなど）。</li>
+                <li>レイアウトの変更やコンテンツの追加は別途お見積もりです。</li>
+                <li>回数を超える修正は、修正回数アップオプション（月単位で追加・解除可）または別途お見積もりです。</li>
+              </ul>
+            </section>
+            <section class="price-notes__col">
+              <p class="price-notes__en">Contract</p>
+              <h4>ご契約について</h4>
+              <ul role="list">
+                <li>最低契約期間は6か月です。7か月目以降は1か月単位で解約できます。</li>
+                <li>6か月以内の解約は、制作費の精算金をお願いしています（BASIC：2,500円／STANDARD：4,000円 × 残り月数）。</li>
+                <li>丁寧に制作するため、新規制作は毎月3件までお受けしています。</li>
+              </ul>
+            </section>
           </div>
-          <div class="price__cta">
-            <p>どちらがいいか分からない方は、<br class="sp-only">LINEでお気軽にご相談ください。</p>
-            <a class="pill pill--line js-line" data-magnetic role="link"><img class="line-logo" src="assets/line-icon.png" alt="" width="24" height="24" aria-hidden="true">LINEで無料相談</a>
-          </div>
+        </div>
+
+        <div class="price-cta" data-reveal>
+          <p class="price-cta__text">どちらのプランがいいか分からない方は、<br class="sp-only">LINEでお気軽にご相談ください。</p>
+          <a class="pill pill--line js-line" data-magnetic role="link"><img class="line-logo" src="assets/line-icon.png" alt="" width="24" height="24" aria-hidden="true">LINEで無料相談</a>
         </div>
       </div>
     </section>
