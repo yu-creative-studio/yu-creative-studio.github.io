@@ -451,15 +451,37 @@
           </article>
         </div>
 
-        <div class="price-opt" data-reveal>
-          <p class="price-opt__label">OPTION</p>
-          <div class="price-opt__body">
-            <h3 class="price-opt__title">修正回数アップ</h3>
-            <p class="price-opt__text">軽微な修正が毎月3回増えます。メニューや季節のお知らせをよく変えるお店におすすめです。</p>
-            <p class="price-opt__plans"><span>BASIC 月1回 → 月4回</span><span>STANDARD 月2回 → 月5回</span></p>
+        <article class="opt-card" data-reveal>
+          <header class="opt-card__head">
+            <div class="opt-card__name">
+              <span class="plan__badge plan__badge--sub">OPTION</span>
+              <h3 class="opt-card__title">修正回数アップ<span class="opt-card__en">Extra Edits</span></h3>
+            </div>
+            <dl class="opt-card__price">
+              <dt>月額に追加</dt>
+              <dd><span class="opt-card__plus">+</span><span class="num">1,650</span><span class="yen">円</span><small>（税込）</small></dd>
+            </dl>
+          </header>
+          <div class="opt-card__body">
+            <p class="opt-card__lead"><span class="opt-card__big">+3</span><span>軽微な修正が、<br>毎月3回増えます。</span></p>
+            <div class="opt-card__right">
+            <ul class="opt-card__rows" role="list">
+              <li class="opt-row">
+                <span class="opt-row__plan">BASIC</span>
+                <span class="opt-row__meter" aria-hidden="true"><i class="dot dot--base"></i><i class="dot dot--add" style="--d:0"></i><i class="dot dot--add" style="--d:1"></i><i class="dot dot--add" style="--d:2"></i><i class="dot dot--empty"></i></span>
+                <span class="opt-row__val"><s>月1回</s><b>月4回</b></span>
+              </li>
+              <li class="opt-row">
+                <span class="opt-row__plan">STANDARD</span>
+                <span class="opt-row__meter" aria-hidden="true"><i class="dot dot--base"></i><i class="dot dot--base"></i><i class="dot dot--add" style="--d:0"></i><i class="dot dot--add" style="--d:1"></i><i class="dot dot--add" style="--d:2"></i></span>
+                <span class="opt-row__val"><s>月2回</s><b>月5回</b></span>
+              </li>
+            </ul>
+            <p class="opt-legend" aria-hidden="true"><span><i class="dot dot--base"></i>プランの回数</span><span><i class="dot dot--add" style="--d:0"></i>オプションで追加</span></p>
+            </div>
           </div>
-          <p class="price-opt__price"><span class="price-opt__plus">月額＋</span><span class="price-opt__num">1,650</span><span class="price-opt__unit">円<small>（税込）</small></span></p>
-        </div>
+          <p class="opt-card__foot">メニューや季節のお知らせをよく変えるお店に。月単位で追加・解除できます。</p>
+        </article>
 
         <div class="price__foot" data-reveal>
           <div class="price__notes">
