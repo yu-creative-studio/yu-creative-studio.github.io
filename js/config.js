@@ -16,6 +16,7 @@ window.SITE_CONFIG = {
   lineUrl: "https://lin.ee/7rMoP1g",
 
   works: {
+    shizuku: "https://yu-creative-studio.github.io/shizuku/",
     moranbon: "https://moranbong-yakiniku.com/",
     rezard: "https://yu-creative-studio.github.io/rezard_gym/",
     kohi: "https://yu-creative-studio.github.io/kohi-seoul/",

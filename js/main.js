@@ -172,7 +172,7 @@
   function shift(d) { target = Math.round(target) + d; }
   function renderInfo(i) {
     var li = cards[i], m = $(".cf__meta", li), url = workUrl(li.getAttribute("data-work"));
-    var html = '<div><h3 class="wi__title">' + $(".cf__title", m).textContent + '</h3><p class="wi__cat">' + $(".cf__cat", m).textContent + '<span class="wi__tag">1ページ構成</span></p></div>' +
+    var html = '<div><h3 class="wi__title">' + $(".cf__title", m).textContent + '</h3><p class="wi__cat">' + $(".cf__cat", m).textContent + '<span class="wi__tag">' + (li.getAttribute("data-type") || "1ページ構成") + '</span></p></div>' +
       (url ? '<a class="pill pill--outline wi__link" href="' + url + '" target="_blank" rel="noopener" data-magnetic>VIEW SITE<span class="pill__arrow" aria-hidden="true"></span></a>' : '<span class="wi__link"></span>') +
       '<p class="wi__desc">' + $(".cf__desc", m).textContent + "</p>";
     info.classList.add("is-swap");
