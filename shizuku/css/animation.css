@@ -1,0 +1,12 @@
+/* =========================================================
+   SHIZUKU tea & tapioca — animation.css
+   読み込み時のちらつき防止と、動きを減らす設定への対応。
+   （GSAPが読み込めない場合は main.js が .js-anim を外し、すべて表示される）
+   ========================================================= */
+
+.js-anim [data-intro],
+.js-anim .header{opacity:0}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
