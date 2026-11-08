@@ -889,3 +889,9 @@ html:not(.js) .loader, .loader.is-skip { display: none; }
   .price-cta { flex-direction: column; align-items: stretch; text-align: center; padding: 30px 22px; }
   .price-cta .pill { width: 100%; justify-content: center; }
 }
+
+.plan__price-sub { flex-wrap: wrap; row-gap: 6px; }
+.plan__price-reg { font-family: var(--f-en); font-size: 14px; color: var(--sub); text-decoration-thickness: 1px; }
+.plan__monitor { font-style: normal; font-size: 11.5px; font-weight: 700; letter-spacing: .1em; color: var(--bg); background: var(--acc); padding: 4px 9px; margin-left: 4px; align-self: center; }
+.opt-row { grid-template-columns: 150px 1fr auto; }
+@media (max-width: 767px) { .opt-row { grid-template-columns: 1fr auto; } }
