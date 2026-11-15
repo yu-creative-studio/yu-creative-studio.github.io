@@ -137,3 +137,15 @@
   .g-item { grid-template-columns: minmax(0, 1fr) minmax(0, 300px); gap: 24px; align-items: start; }
   .g-alert { padding: 36px 40px; }
 }
+
+/* real screenshots (phone, portrait) */
+.g-shot { aspect-ratio: 9 / 16; width: min(100%, 300px); }
+.g-shot--img { aspect-ratio: auto; border: 0; background: none; display: block; }
+.g-shot--img img { display: block; width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--line-strong); box-shadow: 0 24px 40px -28px rgba(23,23,23,.45); background: #fff; }
+@media (max-width: 767px) {
+  .g-shot { width: min(100%, 280px); }
+}
+@media (min-width: 768px) {
+  .g-item { grid-template-columns: minmax(0, 1fr) 260px; }
+  .g-shot { width: 100%; }
+}
