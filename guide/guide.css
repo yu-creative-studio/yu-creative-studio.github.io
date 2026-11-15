@@ -155,3 +155,4 @@
 .g-fields li { position: relative; padding-left: 18px; font-size: 15px; line-height: 1.7; }
 .g-fields li::before { content: ""; position: absolute; left: 2px; top: .72em; width: 7px; height: 7px; border-radius: 50%; background: #C8553D; }
 @media (min-width: 768px) { .g-item--text { grid-template-columns: minmax(0, 1fr); } .g-item--text .g-item__body { max-width: 560px; } }
+.g-item__sub em { font-style: normal; font-weight: 700; color: #C8553D; }
